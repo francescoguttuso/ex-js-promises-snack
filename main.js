@@ -63,13 +63,14 @@ lanciaDado()
 //SNACK 2 BONUS
 
 const creaLanciaDado = () => {
-  let ultimoRisultato;
+  let ultimoRisultato = null;
 
   const lanciaDado = () => {
     const promessa = new Promise((resolve, reject) => {
       console.log("Sto lanciando il dado...");
       setTimeout(() => {
         if (Math.random() < 0.2) {
+          ultimoRisultato = null;
           reject("Il dado si incastra");
         } else {
           resolve(Math.floor(Math.random() * 6) + 1);
