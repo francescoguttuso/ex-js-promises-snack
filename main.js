@@ -43,6 +43,7 @@ getPost(1)
 
 const lanciaDado = () => {
   const promessa = new Promise((resolve, reject) => {
+    console.log("Sto lanciando il dado...");
     setTimeout(() => {
       if (Math.random() < 0.2) {
         reject("Il dado si incastra");
@@ -66,6 +67,7 @@ const creaLanciaDado = () => {
 
   const lanciaDado = () => {
     const promessa = new Promise((resolve, reject) => {
+      console.log("Sto lanciando il dado...");
       setTimeout(() => {
         if (Math.random() < 0.2) {
           reject("Il dado si incastra");
